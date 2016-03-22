@@ -33,7 +33,13 @@ $ python setup.py install
 
 Install Linux or buy a Mac and see above.
 
+_I'm sorry. That was a bit rude. I'm sure it's possible, but I don't have the faintest idea how Windows works_
+_My hunch is as follows:_
 
+1. Find out the absolute path of the module as follows:
+> `python -c 'import copysc; print(copysc.__path__[0])'`
+
+2. Copy that path and add it to your PATH variable on windows.
 ## Usage:
 
 ```python
