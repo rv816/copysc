@@ -31,7 +31,11 @@ Command Line Utility
 *Linux*
 '''''''
 
-``$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bashrc``
+.. code:: bash
+
+    $ export copyscpath=$(python -c 'import copysc; print(copysc.__path__[0])')
+    $ echo export PATH=$PATH:$copyscpath >> ~/.bashrc
+    $ sudo chmod 755 $copyscpath/copyscreen.py
 
 You may also need to install a clipboard drivers to enable pyperclip to
 interact with your X clipboard.
@@ -44,7 +48,11 @@ interact with your X clipboard.
 *Mac*
 '''''
 
-``$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bash_profile``
+.. code:: bash
+
+    $ export copyscpath=$(python -c 'import copysc; print(copysc.__path__[0])')
+    $ echo export PATH=$PATH:$copyscpath >> ~/.bash_profile
+    $ sudo chmod 755 $copyscpath/copyscreen.py
 
 *Windows*
 '''''''''
@@ -82,8 +90,8 @@ OR...you can feed it a link directly
 From the command line:
 ~~~~~~~~~~~~~~~~~~~~~~
 
-``$ copyscreen https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0``
-
-OR to directly access the clipboard
-
 ``$ copyscreen``
+
+*or*
+
+``$ copyscreen http://screencloud.net/v/zOk6``

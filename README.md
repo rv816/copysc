@@ -1,4 +1,4 @@
-# Convert "Screenshot-sharing" utility links to markdown-ready *.png files
+#Convert "Screenshot-sharing" utility links to markdown-ready *.png files
 I'm sure you are also annoyed that screenshot-sharing utilities like Screencloud and Dropbox only copy a link to their screenshot viewing page, not to the `.png` file itself. 
 
 
@@ -22,7 +22,11 @@ $ python setup.py install
 #### Command Line Utility
 ##### _Linux_
 
-`$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bashrc`
+```bash
+$ export copyscpath=$(python -c 'import copysc; print(copysc.__path__[0])')
+$ echo export PATH=$PATH:$copyscpath >> ~/.bashrc
+$ sudo chmod 755 $copyscpath/copyscreen.py
+```
 
 You may also need to install a clipboard drivers to enable pyperclip to interact with your X clipboard.
 
@@ -34,8 +38,11 @@ $ sudo apt-get install xsel
 
 ##### _Mac_
 
-
-`$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bash_profile`
+```bash
+$ export copyscpath=$(python -c 'import copysc; print(copysc.__path__[0])')
+$ echo export PATH=$PATH:$copyscpath >> ~/.bash_profile
+$ sudo chmod 755 $copyscpath/copyscreen.py
+```
 
 ##### _Windows_
 

@@ -4,6 +4,9 @@
 *.so
 
 # Packages
+*ipynb*
+
+*cache*
 *.egg
 *.egg-info
 dist

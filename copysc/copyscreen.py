@@ -1,14 +1,15 @@
 #! /usr/bin/env python
 
-import mechanicalsoup as ms
+import bs4
 from itertools import islice
 import re
 import pyperclip
 import sys
 import warnings
+import requests
+
 
 def convert_clipboard(link = None):
-    browse = ms.Browser()
     if not link:
         link = pyperclip.paste()
 
@@ -19,8 +20,9 @@ def convert_clipboard(link = None):
         return newlink
 
     else:
-        pg = browse.get(link)
-        string = pg.soup.findAll('img')
+        pg = requests.get(link)
+        string_pre = bs4.BeautifulSoup(pg.content)
+        string = string_pre.findAll('img')
         filted = filter(lambda x: re.findall('//.+png', x.attrs.get('src')), string)
         for x in filted:
             tocopy = str('http://' + str(re.findall('//.+png', x.attrs['src'])[0].strip('//')))
@@ -34,10 +36,8 @@ if __name__ == '__main__':
             link = sys.argv[1]
         else:
             link = None
-            try:
-                convert_clipboard(link)
-            except Warning:
-                convert_clipboard(link)
+        
+        convert_clipboard(link)
     except Exception as err:
         print(err)
         print('Either pass an argument or try again with a different link.')
