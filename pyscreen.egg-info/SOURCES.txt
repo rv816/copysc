@@ -1,9 +1,0 @@
-README.rst
-setup.py
-pyscreen/__init__.py
-pyscreen/clipboard.py
-pyscreen.egg-info/PKG-INFO
-pyscreen.egg-info/SOURCES.txt
-pyscreen.egg-info/dependency_links.txt
-pyscreen.egg-info/requires.txt
-pyscreen.egg-info/top_level.txt

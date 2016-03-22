@@ -1,14 +1,14 @@
 import setuptools
 
 setuptools.setup(
-    name="pyscreen",
-    version="0.1.0",
+    name="copysc",
+    version="0.1.5",
     url="https://github.com/rv816/pyscreen",
 
     author="Ryan Vass",
     author_email="rvsax16@gmail.com",
 
-    description="Small utility that translates a screencloud url into a png url",
+    description="Small utility that translates a shared screenshot url into a markdown-ready *.png url. Works with dropbox, screencloud, and others.",
     long_description=open('README.md').read(),
 
     packages=setuptools.find_packages(),
