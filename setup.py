@@ -2,8 +2,8 @@ import setuptools
 
 setuptools.setup(
     name="copysc",
-    version="0.1.5",
-    url="https://github.com/rv816/pyscreen",
+    version="0.1.6",
+    url="https://github.com/rv816/copysc",
 
     author="Ryan Vass",
     author_email="rvsax16@gmail.com",
