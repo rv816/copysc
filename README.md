@@ -37,9 +37,12 @@ _I'm sorry. That was a bit rude. I'm sure it's possible, but I don't have the fa
 _My hunch is as follows:_
 
 1. Find out the absolute path of the module as follows:
-> `python -c 'import copysc; print(copysc.__path__[0])'`
+`C:\>python -c 'import copysc; print(copysc.__path__[0])'`
 
 2. Copy that path and add it to your PATH variable on windows.
+
+______ 
+
 ## Usage:
 
 ```python
