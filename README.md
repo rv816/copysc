@@ -24,7 +24,7 @@ $ python setup.py install
 
 `$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bashrc`
 
-You may also need to install a clipboard driver to enable pyperclip to interact with your X clipboard.
+You may also need to install a clipboard drivers to enable pyperclip to interact with your X clipboard.
 
 ```
 $ sudo apt-get install xclip
