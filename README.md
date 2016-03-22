@@ -4,7 +4,7 @@ I'm sure you are also annoyed that screenshot-sharing utilities like Screencloud
 
 So, if you have a python window open, use this module to quickly `convert_clipboard()` to a downloadable link.
 
-In the backgound, this simply accesses the page linked by the screenshot-sharing utility using `mechanicalsoup`, finds the first link that ends in png using regex, and copies that to the clipboard using pyperclip. 
+In the backgound, this simply accesses the page linked by the screenshot-sharing utility using `requests`, parses it with BeautifulSoup,  finds the first link that ends in png using regex, and copies that to the clipboard using pyperclip. 
 
 ## Installation
 

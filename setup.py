@@ -16,7 +16,7 @@ except OSError:
 
 setuptools.setup(
     name="copysc",
-    version="0.2.4",
+    version="0.2.5",
     url="https://github.com/rv816/copysc",
 
     author="Ryan Vass",
@@ -26,7 +26,7 @@ setuptools.setup(
     long_description = long_description,
     packages=setuptools.find_packages(),
 
-    install_requires=['pyperclip', 'mechanicalsoup'],
+    install_requires=['pyperclip', 'bs4', 'requests'],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
