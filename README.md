@@ -24,6 +24,14 @@ $ python setup.py install
 
 `$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bashrc`
 
+You may also need to install a clipboard driver to enable pyperclip to interact with your X clipboard.
+
+```
+$ sudo apt-get install xclip
+$ sudo apt-get install xsel
+```
+
+
 ##### _Mac_
 
 
@@ -45,6 +53,8 @@ ______
 
 ## Usage:
 
+### As python module:
+
 ```python
 from copysc.copyscreen import convert_clipboard
 convert_clipboard()
@@ -57,6 +67,15 @@ from copysc.copyscreen import convert_clipboard
 convert_clipboard(link= 'https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0')
 
 ```
+
+### From the command line:
+
+`$ copyscreen https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0`
+
+OR to directly access the clipboard
+
+`$ copyscreen`
+
 
 
 
