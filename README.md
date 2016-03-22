@@ -70,11 +70,12 @@ convert_clipboard(link= 'https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%20
 
 ### From the command line:
 
-`$ copyscreen https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0`
-
-OR to directly access the clipboard
-
 `$ copyscreen`
+
+_or_
+
+
+`$ copyscreen http://screencloud.net/v/zOk6`
 
 
 
