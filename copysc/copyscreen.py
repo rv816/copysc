@@ -21,7 +21,7 @@ def convert_clipboard(link = None):
 
     else:
         pg = requests.get(link)
-        string_pre = bs4.BeautifulSoup(pg.content)
+        string_pre = bs4.BeautifulSoup(pg.content, "html.parser")
         string = string_pre.findAll('img')
         filted = filter(lambda x: re.findall('//.+png', x.attrs.get('src')), string)
         for x in filted:
@@ -36,7 +36,7 @@ if __name__ == '__main__':
             link = sys.argv[1]
         else:
             link = None
-        
+
         convert_clipboard(link)
     except Exception as err:
         print(err)

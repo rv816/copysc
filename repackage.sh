@@ -21,13 +21,12 @@ echo
 log "Convert" "README.md->README.rst"
 
 # convert README.md to README.rst
-pandoc --from=markdown --to=rst --output=README.rst README.md || abort "fails to convert README.md"
+pandoc --from=markdown --to=rst --output=README.txt README.md || abort "fails to convert README.md"
 
 
 log "Cleaning old package debris..."
 
-
-rm -rf build dist copysc.egg-infoa
+rm -rf build dist copysc.egg-info
 
 log "Publishing..."
 

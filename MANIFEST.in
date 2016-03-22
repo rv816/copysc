@@ -1,0 +1,4 @@
+include copysc README* setup.py copysc/copyscreen
+recursive-include copysc * 
+recursive-include dist * 
+recursive-include tests *
