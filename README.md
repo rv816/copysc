@@ -6,18 +6,45 @@ So, if you have a python window open, use this module to quickly `convert_clipbo
 
 In the backgound, this simply accesses the page linked by the screenshot-sharing utility using `mechanicalsoup`, finds the first link that ends in png using regex, and copies that to the clipboard using pyperclip. 
 
+## Installation
 
-Usage:
+#### Python Module 
+
+`pip install copysc`
+
+or
+```bash
+$ git clone https://github.com/rv816/copysc.git
+$ cd copysc
+$ python setup.py install
+```
+
+#### Command Line Utility
+##### _Linux_
+
+`$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bashrc`
+
+##### _Mac_
+
+
+`$ echo export PATH=$PATH:$(python -c 'import copysc; print(copysc.__path__[0])') >> ~/.bash_profile`
+
+##### _Windows_
+
+Install Linux or buy a Mac and see above.
+
+
+## Usage:
 
 ```python
-from copysc.clipboard import convert_clipboard
+from copysc.copyscreen import convert_clipboard
 convert_clipboard()
 
 ```
 
 OR...you can feed it a link directly
 ```python
-from copysc.clipboard import convert_clipboard
+from copysc.copyscreen import convert_clipboard
 convert_clipboard(link= 'https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0')
 
 ```
