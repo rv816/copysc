@@ -18,7 +18,7 @@ convert_clipboard()
 OR...you can feed it a link directly
 ```python
 from copysc.clipboard import convert_clipboard
-convert_clipboard(link=)
+convert_clipboard(link= 'https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0')
 
 ```
 
