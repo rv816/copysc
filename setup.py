@@ -6,7 +6,7 @@ import setuptools
 
 setuptools.setup(
     name="copysc",
-    version="0.3.2",
+    version="0.3.3",
     url="https://github.com/rv816/copysc",
 
     author="Ryan Vass",

@@ -19,7 +19,7 @@ Installation
 ------------
 
 Python Module
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 ``pip install copysc``
 
@@ -32,10 +32,10 @@ or
     $ python setup.py install
 
 Command Line Utility
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 *Mac*
-^^^^^
+'''''
 
 .. code:: bash
 
@@ -49,7 +49,7 @@ on to next step. I've tried to configure the installer to install the
 symlink, but that's still in alpha and may not work.
 
 *Linux*
-^^^^^^^
+'''''''
 
 .. code:: bash
 
@@ -71,18 +71,43 @@ interact with your X clipboard.
     $ sudo apt-get install xsel
 
 *Windows*
-^^^^^^^^^
+'''''''''
 
 Install Linux or buy a Mac and see above.
 
-*Forgive my rudeness. I'm sure it's possible, but I don't have the
-faintest idea how Windows works* *My hunch is that the below
-instructions might be helpful:*
+*I kid. I'm sure it's possible, but I don't have the faintest idea how
+Windows works* *My hunch is that the below instructions might be
+helpful:*
 
 1. Find out the absolute path of the module as follows:
    ``C:\>python -c 'import copysc; print(copysc.__path__[0])'``
 
-2. Copy that path and add it to your PATH variable on windows.
+2. Copy the output of **Step 1** to the clipboard.
+3. Add the path you copied above to your PATH variable on windows as
+   follows: > From the desktop, right click the My Computer icon. > 1.
+   Choose Properties from the context menu. > 2. Click the Advanced tab
+   (Advanced system settings link in Vista). > 3. Click Environment
+   Variables. You should see something that looks like this: |environ| >
+   4. Select "Path" and click "Edit". > 5. In Windows 10, you should see
+   something like this: |win10|. > 6. Click "New" and add the directory
+   you copied above > - **IMPORTANT**: If you have Windows XP, 7, or 8,
+   you will need to edit the text of ``PATH`` diretly. Instead of Step 5
+   above, you will need to add a semicolon (";") at the end of the value
+   currently assigned to the ``PATH`` variable, and **then** paste teh
+   value you copied above in Step 2. > 7. Save the results and go back
+   to the "Envornmnetal Variables" window you saw in **Step 3**. > 8.
+   Select "PATHEXT" and click "Edit". (Note: if it's not there, create
+   it as a new system variable.) > 9. Click "New" and add ".py" (without
+   the quotes). This tells windows to treat files ending in ".py" as an
+   executible, so you can simply type "copyscreen" from the command
+   line. If you do not want to do this (it is harmless), you will simply
+   need to type copyscreen.py instead of copyscreen when using the
+   utility.
+
+Note: PATH just has a list of directories to search when you type a
+command at the Command Prompt, so that if you type "copyscreen" at the
+command line, it will search the list of directories assigned to the
+PATH variable above.
 
 --------------
 
@@ -113,3 +138,5 @@ OR...you can feed it a link directly
     from copysc.copyscreen import convert_clipboard
     convert_clipboard(link= 'https://www.dropbox.com/s/wg24eyirfaqrbnw/Screenshot%202014-10-17%2018.06.22.png?dl=0')
 
+.. |environ| image:: http://www.computerhope.com/issues/pictures/winpath.jpg
+.. |win10| image:: http://www.howtogeek.com/wp-content/uploads/2016/03/527x501x2016-03-24_11h02_18.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.tCgwD5Bcex.png
